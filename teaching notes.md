@@ -64,12 +64,10 @@ $myCar->drive();
 
 ---
 
-## Slide 7 – Encapsulation
-- Keep data and methods together
-- Protect data from direct access
-- Use `private`, `public`
-
----
+## Slide 7 – Encapsulation (The "Security" Pillar)
+This is about bundling data and methods into a single unit (a class) and restricting access to the inner workings.
+- Goal: Protect the internal state of an object from outside interference.
+- PHP Tool: Access modifiers (public, private, protected).
 
 ## Slide 8 – Encapsulation Example
 ```php
@@ -88,9 +86,11 @@ class BankAccount {
 
 ---
 
-## Slide 9 – Abstraction
-- Show only important features
-- Hide complex logic
+## Slide 9 – Abstraction (The "Simplicity" Pillar)
+Abstraction is about hiding complexity. It means showing only the essential features of an object to the outside world while hiding the "how it works" logic.
+
+- Analogy: You know how to use a steering wheel to turn a car, but you don't need to know how the rack-and-pinion gear system works under the hood.
+- PHP Tool: abstract classes and interfaces.
 
 **Real life:** Driving a car without knowing engine details
 
@@ -110,12 +110,11 @@ class Car {
 
 ---
 
-## Slide 11 – Inheritance
-- One class uses another class
-- "IS-A" relationship
+## Slide 11 – Inheritance (The "Reuse" Pillar)
+Inheritance allows one class to use another class.
 
-Example:
-- Dog is an Animal
+- Goal: Create a hierarchy and reuse logic.
+- PHP Tool: The extends keyword.
 
 ---
 
@@ -136,9 +135,12 @@ class Dog extends Animal {
 
 ---
 
-## Slide 13 – Polymorphism
+## Slide 13 – Polymorphism (The "Flexibility" Pillar)
+Polymorphism means:
 - Same method name
 - Different behavior
+- Example: A Circle and a Square are both Shapes. You can call a calculateArea() method on both, but the math inside is different for each.
+- PHP Tool: Method overriding and interfaces.
 
 ---
 
@@ -159,51 +161,26 @@ class Cat extends Animal {
 
 ---
 
-## Slide 15 – Composition (HAS-A)
-- Strong relationship
-- One object is part of another
+## Slide 15 - Four Pillars of Object-Oriented Programming (OOP)
 
-Example: Car has Engine
+The table below summarizes the **four main pillars of OOP**, their focus, and key benefits.
 
----
-
-## Slide 16 – Composition Example
-```php
-class Engine {
-  public function start() {}
-}
-
-class Car {
-  private $engine;
-  public function __construct() {
-    $this->engine = new Engine();
-  }
-}
-```
+| Pillar | Focus | Key Benefit |
+|------|------|-------------|
+| **Encapsulation** | Hiding data | Security & control |
+| **Inheritance** | Sharing code | Less duplication |
+| **Abstraction** | Hiding complexity | Easier to use |
+| **Polymorphism** | Changing behavior | Flexibility |
 
 ---
 
-## Slide 17 – Association & Aggregation
-- Association: objects work together
-- Aggregation: weak HAS-A relationship
+## 🎯 Slide 16 - Key Takeaway
 
-Example:
-- Student uses Teacher
-- Team has Players
+> The four pillars of OOP work together to create software that is **secure, reusable, simple, and flexible**.
 
 ---
 
-## Slide 18 – Dynamic Binding
-- Method call decided at runtime
-
-```php
-$animal = new Dog();
-$animal->sound();
-```
-
----
-
-## Slide 19 – OOP Summary
+## Slide 17 – OOP Summary
 - Class → Blueprint
 - Object → Real thing
 - Encapsulation → Protect data
@@ -213,7 +190,7 @@ $animal->sound();
 
 ---
 
-## Slide 20 – Final Advice
+## Slide 18 – Final Advice
 - Understand concepts, not memorize code
 - Practice small examples
 - Draw diagrams
