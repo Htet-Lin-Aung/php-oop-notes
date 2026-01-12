@@ -10,7 +10,6 @@ In professional PHP, we rarely leave properties `public`. We use the **Construct
 ### The Secure Student Example
 
 
-
 ```php
 <?php
 class Student {
@@ -43,4 +42,17 @@ class Student {
 $student1 = new Student(101, "Aung Aung", 95);
 
 echo $student1->getSummary();
+?>
+```
+
+# Pro-Tip: PHP 8.0+ Shortcut
+If you are using modern PHP, you can use Constructor Property Promotion. This combines the property declaration and the assignment into one line:
+
+```php
+<?php
+public function __construct(
+    private int $id, 
+    private string $name, 
+    private int $grade
+) {}
 ?>
